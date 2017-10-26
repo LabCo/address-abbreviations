@@ -1,20 +1,23 @@
 {
   "name": "address-abbr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Converts addresses from full name to abbreviations an vice versa",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "devDependencies": {
     "@types/jest": "^21.1.5",
     "@types/node": "^8.0.47",
+    "copyfiles": "^1.2.0",
     "jest": "^21.2.1",
     "ts-jest": "^21.1.3",
     "tsc": "^1.20150623.0",
     "typescript": "^2.5.3"
   },
   "scripts": {
+    "jsoncopy": "copyfiles -f src/*.json dist",
     "tsc": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "dist": "npm run jsoncopy && npm run tsc"
   },
   "jest": {
     "globals": {

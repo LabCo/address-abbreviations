@@ -1,6 +1,8 @@
+import * as data from "./data.json";
+
 export namespace States {
 
-  const statesData: [{name:string, abbr:string} ] = require('./data.json');  
+  const statesData: [{name:string, abbr:string} ] = <any>data; 
 
   const tupled = statesData.map(d => [d.abbr.toLowerCase(), d.name])
   const abbr2Name = statesData.reduce( (map:{[key:string]: string}, data:{name:string, abbr:string}) => {

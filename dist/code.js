@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const data = require("./data.json");
 var States;
 (function (States) {
-    const statesData = require('./data.json');
+    const statesData = data;
     const tupled = statesData.map(d => [d.abbr.toLowerCase(), d.name]);
     const abbr2Name = statesData.reduce((map, data) => {
         map[data.abbr.toLowerCase()] = data.name;
