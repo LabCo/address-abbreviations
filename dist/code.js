@@ -14,11 +14,15 @@ var States;
         return map;
     }, {});
     function getName(abbr) {
+        if (abbr == null)
+            return null;
         const lcAbbr = abbr.toLowerCase();
         return abbr2Name[lcAbbr];
     }
     States.getName = getName;
     function getAbbr(name) {
+        if (name == null)
+            return null;
         const lcName = name.toLowerCase();
         return name2Abbr[lcName];
     }

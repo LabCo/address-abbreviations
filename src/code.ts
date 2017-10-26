@@ -15,10 +15,14 @@ export namespace States {
   }, {})
 
   export function getName(abbr: string): string {
+    if(abbr == null) return null;
+
     const lcAbbr = abbr.toLowerCase()
     return abbr2Name[lcAbbr]
   }
   export function getAbbr(name: string): string {
+    if(name == null) return null;
+    
     const lcName = name.toLowerCase()
     return name2Abbr[lcName]
   }
