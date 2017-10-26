@@ -1,5 +1,5 @@
 {
-  "name": "address-appreviations",
+  "name": "address-abbr",
   "version": "1.0.0",
   "description": "Converts addresses from full name to abbreviations an vice versa",
   "main": "dist/index.js",
